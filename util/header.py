@@ -4,14 +4,14 @@ import json
 
 FILENAME = 'header.json'
 
-header = {'name': 'Calc',
-          'version': '1.0.3',
-          'border': "-=================-",
-          'extra' : "Type 'exit' to quit"} 
+default_header = {'name'   : 'Calc',
+                  'version': '1.0.0',
+                  'border' : "-=================-",
+                  'extra'  : "Type 'exit' to quit"} 
 
 def save(fp):
     with open(fp, 'w') as f:
-        json.dump(header, f)
+        json.dump(default_header, f)
 
 def getHeader(fp):
     content = ''
